@@ -22,7 +22,7 @@ namespace Sitecore.Support.XA.Foundation.LocalDatasources.Pipelines.ResolveRende
                 Item contextItem = args.GetContextItem();
                 if (contextItem != null)
                 {
-                    if (!ServiceLocator.ServiceProvider.GetService<IContext>().Site.IsSxaSite())
+                    if (!contextItem.IsSxaSite())
                     {
                         return;
                     }
